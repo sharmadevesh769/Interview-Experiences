@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@500&display=swap');
+
+.App {
+  color: #3B413C;
+  background: #DAF0EE;
+  font-family: 'Poppins', sans-serif;
+  height: 150vh;
+}
+
+.Nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Nav-mid {
+  padding: 30px;
+  display: flex;
+  width: 45%;
+  justify-content: space-evenly;
+}
+
+.mid-bt {
+  /* background-color: red; */
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #3B413C;
+  font-weight: bold;
+}
+
+.mid-bt:hover {
+  background-color: #DAF0EE;
+  transition: 0.1s ease-in-out;
+}
+
+.signin-cont {
+  padding: 30px;
+}
+
+.signin-bt {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  background: #DAF0EE;
+  color: #3B413C;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.signin-bt:hover {
+  /* border: solid 5px #DAF0EE; */
+  background-color: white;
+  transition: 0.1s ease-in-out;
+}
+
+.Home {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.name {
+  color: #326274;
+  font-size: 60px;
+  margin-top: -50px;
+  /* font-family: 'Inter', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  /* margin-top: 100px; */
+}
+
+.search-box {
+  padding: 10px;
+  width: 600px;
+  height: 25px;
+  border-radius: 20px;
+  font-size: 20px;
+  border: none;
+}
+
+.Nav-Logo {
+  display: flex;
+}
+
+.Contact {
+  padding: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 10px;
+}
+
+.contact-form button {
+  width: 60px;
+  height: 35px;
+  margin-left: auto;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  color: aliceblue;
+  background-color: #326274;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  transition: 0.1s ease-in;
+  background-color: rgb(25, 33, 40);
+  cursor: pointer;
+}
+
+.contact-form input {
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+.contact-form textarea {
+  border-radius: 5px;
+  border: none;
+}
+
+.contact-form input:focus {
+
+  border-radius: 3px;
+  border: none;
+  outline: none;
+}
+
+.contact-form label {
+  margin: 10px 0px;
+  font-size: 15px;
+  font-weight: bold;
+
+}
+
+.contact-add {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.contact-addr {
+  width: 500px;
+  padding: 15px;
+  /* height: 100px; */
+}
+
+.SignIn {
+  width: 300px;
+  height: 350px;
+  background: white;
+  /* display: flex; */
+  /* flex-direction: column; */
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px rgb(182, 179, 179);
+  margin: 5% 40%;
+}
+
+.Sign-form {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.Sign-form button {
+  color: white;
+  background-color: #1877f2;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.Sign-form input {
+  /* color: rgb(110, 107, 107); */
+  /* background-color:#1877f2; */
+  margin: 10px 0;
+  /* border: 2px rgb(11, 11, 11); */
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.SignIn h2 {
+  font-weight: bold;
+  /* margin-right: 50%; */
+  width: 100%;
+  text-align: center;
+
+}
+
+.Sign-form button:hover {
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  background-color: #175ab1;
+}
+
+
+.SignUp {
+  width: 370px;
+  height: 480px;
+  background: white;
+  /* display: flex; */
+  /* flex-direction: column; */
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px rgb(182, 179, 179);
+  margin: 5% 40%;
+}
+
+.SignUp h2 {
+  font-weight: bold;
+  /* margin-right: 50%; */
+  width: 100%;
+  text-align: center;
+
+}
+
+.SignUp-Name {
+  display: flex;
+}
+
+.SignUp-Name input {
+  width: 154px;
+  margin-right: 5px;
+}
+
+.Resources-Card {
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+  background: white;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px grey;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+.Resources-title {
+  width: 100%;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.Resources-Card h3 {
+  font-weight: bold;
+  font-size: 30px;
+  color: #3B413C;
+  margin-top: -5px;
+  margin-left: 40%;
+}
+
+.Resources-label {
+  /* padding: 10px; */
+  width: 100%;
+  height: 100px;
+  /* margin: 5px 5px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Resources-label p {
+  padding: 3px;
+  /* margin: 5px 5px; */
+  margin-bottom: 40px;
+  /* background: #cdd7cb; */
+  color: rgb(36, 84, 158);
+  /* border-radius: 10px; */
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.Resources-Card a {
+  color: #326274;
+  background-color: white;
+  margin: 5px 0;
+  border: 3px solid #326274;
+  /* border-radius: 5px; */
+
+  padding: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.Resources-Card a:hover {
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  background-color: #326274;
+  color: white;
+}
+
+.Resources-title {
+  font-weight: bold;
+  font-size: 50px;
+  margin-left: 40%;
+}
+
+.Res-Cont {
+  display: flex;
+}
+
+.RDataCard {
+  padding: 20px;
+  width: 400px;
+  height: 300px;
+  /* background: white; */
+  margin: 20px;
+  border-radius: 10px;
+  /* box-shadow: 3px 3px rgb(21, 21, 21); */
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.RDataCard-Link {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.RDataCard-Link a {
+  color: #326274;
+  background-color: white;
+  margin: 5px 30px;
+  border: 3px solid #326274;
+  /* border-radius: 5px; */
+
+  padding: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  width: 80px;
+
+  /* height: 40px; */
+}
+
+.RDataCard-Link a:hover {
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  background-color: #326274;
+  color: white;
+}
+
+.RDataCard h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: #3B413C;
+  margin-top: -5px;
+  margin-left: 40%;
+  text-decoration: solid underline;
+}
+
+.RDataCard-list {
+  padding: 3px;
+  /* margin: 5px 5px; */
+  margin-bottom: 40px;
+  /* background: #cdd7cb; */
+  color: rgb(36, 84, 158);
+  /* border-radius: 10px; */
+  font-size: 15px;
+
+}
