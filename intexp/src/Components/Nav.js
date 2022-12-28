@@ -1,6 +1,15 @@
 import React from "react";
 import logolite from "../img/logo-lite.png"
-const Nav = () => {
+
+const Nav = ({isLoggedIn}) => {
+    // console.log("data",isLoggedIn)
+
+    function logout(){
+        if(isLoggedIn){
+        localStorage.clear();
+        }
+    }
+
     return (
         <div className="Nav">
             <div className="Nav-Logo">
@@ -8,7 +17,7 @@ const Nav = () => {
                 <h1 className="Logo-title">IntEXP</h1>
             </div>
             <div className="Nav-mid">
-                <a href="/Home" className="mid-bt">
+                <a href="/" className="mid-bt">
                     Home
                 </a>
                 <a href="Exp" className="mid-bt">
@@ -24,9 +33,10 @@ const Nav = () => {
                     Contact Us
                 </a>
             </div>
-            <div className="signin-cont">
-                <a href="/" className="signin-bt">
-                    Sign In
+            
+            <div className="signin-cont" onClick={logout}>
+                <a href={isLoggedIn ? "/"  : "/SignIn"} className="signin-bt">
+                   {isLoggedIn ? "Log Out" : "Sign In"}
                 </a>
             </div>
         </div>

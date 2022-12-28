@@ -1,77 +1,25 @@
-const express =require ('express')
-// const bodyParser =require ('body-parser')
-const cors =require ('cors')
-const mongoose =require ('mongoose')
-// const User =require ("./models/user.model.js")
-const jwt = require('jsonwebtoken');
-
-
-const app=express()
-app.use(express.json())
-app.use(express.urlencoded())
+import express from 'express'
+const app = express()
+import mongoose from 'mongoose'
+import dotenv from 'dotenv'
+import userRoutes from './routes/userRoutes.js'
+import expRoutes from './routes/expRoutes.js'
+import resRoutes from './routes/resRoute.js'
+import cors from 'cors'
+dotenv.config()
 app.use(cors())
-mongoose.set('strictQuery', true);
-mongoose.connect('mongodb+srv://intexp:intexp@cluster0.chusd2i.mongodb.net/?retryWrites=true&w=majority',{
-    useNewUrlParser:true,
-    useUnifiedTopology:true
-},()=>console.log('DataBase Connected'))
-
-
-const userSchema = new mongoose.Schema({
-    fname:String,
-    lname:String,
-    email:String,
-    password:String
-})
-
-const User = new mongoose.model("User",userSchema)
-
-
-
-
-app.post("/login",(req,res)=>{
-    const {email,password}=req.body
-    User.findOne({email:email},(err,user)=>{
-        if(user){
-            if( password === user.password ){
-                res.send({message:"Login Successfull",user})
-            }else{
-                res.send({message:"Incorrect Password"})
-            }
-        }else{
-            res.send({message:"User not registered"})
-        }
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+app.use('/api',userRoutes)
+app.use('/api',expRoutes)
+app.use('/api',resRoutes)
+mongoose.set('strictQuery', true)
+mongoose.connect(process.env.DB_URL).then(
+    app.listen(8000, () => {
+        console.log("Server Connected on 8000")
     })
+).catch((err) => {
+    console.log("ERROR:", err)
 })
-app.post("/register",(req,res)=>{
-    const {fname, lname, email, password}=req.body
-    User.findOne({email: email},(err,user)=>{
-        if(user){
-            res.send({message:"User lready Registered"})
-        } else {
-            const user = new User({
-                fname,
-                lname,
-                email,
-                password
-            })
-            user.save(err=>{
-                console.log(err)
-                if(err){
-                    res.send(err)
-                }else{
-                    res.send({message:"Success"})
-                }
-            })
-        }
-    })
-    
-})
-
-
-app.listen(9002,()=>{
-    console.log("Server at 9002")
-})
-
 
 

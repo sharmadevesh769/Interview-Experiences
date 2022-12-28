@@ -26,9 +26,9 @@ const SignUp = () => {
     e.preventDefault()
     const { fname, lname, email, password, cpassword } = user
     console.log("HELLO")   
-    if (fname && lname && email && password && (password === cpassword)) {  
+    if (fname && email && password && (password === cpassword)) {  
       
-      axios.post("http://localhost:9002/register", user)
+      axios.post("http://localhost:8000/api/register", user)
       .then(res=>console.log(res))
     }else{
       alert("Invalid Input")

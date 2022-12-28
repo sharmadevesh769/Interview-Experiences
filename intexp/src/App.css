@@ -388,3 +388,23 @@
   font-size: 15px;
 
 }
+
+.Experience{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    width: 600px;
+    height: 100%;
+    background: whitesmoke;
+}
+
+.ShowExp{
+  display: flex;
+  flex-direction: column;
+}
+.NB{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}

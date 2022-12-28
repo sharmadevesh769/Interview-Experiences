@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
-function SignIn() {
-
+import { useNavigate } from 'react-router-dom'
+function SignIn({setIsLoggedIn}) {
+  const nav=useNavigate()
   
   const [user,setUser]=useState({
      
@@ -21,8 +22,16 @@ function SignIn() {
 
   const login=(e)=>{
     e.preventDefault()
-    axios.post("http://localhost:9002/login",user)
-    .then(res=>alert(res.data.message))
+    axios.post("http://localhost:8000/api/login",user)
+    .then(res=>{
+      // console.log(res.data.token)
+      localStorage.setItem('TOKEN',res.data.token);
+      nav("/");
+      setIsLoggedIn(true);
+      // if(res.status===200){
+      //  nav('/')
+      // }
+    })
   }
 
   return (
