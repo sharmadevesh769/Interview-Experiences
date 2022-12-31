@@ -9,7 +9,6 @@ import SignIn from './Components/SignIn';
 import SignUp from './Components/SignUp';
 import Resources from './Components/Resources';
 import RData from './Components/RData';
-import About from './Components/About';
 import {useState,useEffect} from 'react'
 import Experience from './Components/Experience';
 import MyExp from './Components/MyExp'
@@ -36,7 +35,6 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route path='/Exp' element={<Experience />} />
-        {/* <Route path='/About' element={<About />} /> */}
         <Route path='/Contact' element={<Contact />} />
         <Route path='/SignIn' element={<SignIn setIsLoggedIn={setIsLoggedIn} />} />
         <Route path='/SignUp' element={<SignUp />} />

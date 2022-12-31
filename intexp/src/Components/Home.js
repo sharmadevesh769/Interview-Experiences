@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import IMG from "../img/logo.png";
 import pic from "../img/Online-University.svg"
+import'./Home.css'
 import axios from 'axios';
 const Home = () => {
 

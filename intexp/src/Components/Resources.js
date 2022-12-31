@@ -3,6 +3,7 @@ import RCard from './RCard'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+// import './Resources.css'
 const Resources = () => {
 
     return (

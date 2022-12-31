@@ -1,5 +1,6 @@
 import React from "react";
 import logolite from "../img/logo-lite.png"
+import './Nav.css'
 
 const Nav = ({isLoggedIn}) => {
     // console.log("data",isLoggedIn)

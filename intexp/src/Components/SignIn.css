@@ -1,0 +1,50 @@
+.signin-cont {
+    padding: 30px;
+  }
+  
+  .signin-bt {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    background: #2A265F;;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .signin-bt:hover {
+    /* border: solid 5px #DAF0EE; */
+    background-color: white;
+    color:#2A265F;
+    border:5px solid #2A265F;
+    transition: 0.1s ease-in-out;
+  }
+  .SignIn {
+    width: 300px;
+    height: 350px;
+    background: white;
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px rgb(182, 179, 179);
+    margin: 5% 40%;
+  }
+  
+  
+  
+  .SignIn h2 {
+    font-weight: bold;
+    /* margin-right: 50%; */
+    width: 100%;
+    text-align: center;
+  
+  }
+  
+  .Sign-form button:hover {
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    background-color: #175ab1;
+  }
+  

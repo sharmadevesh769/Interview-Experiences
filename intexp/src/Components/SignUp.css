@@ -1,0 +1,56 @@
+.SignUp {
+    width: 370px;
+    height: 480px;
+    background: white;
+    /* display: flex; */
+    /* flex-direction: column; */
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px rgb(182, 179, 179);
+    margin: 5% 40%;
+  }
+  
+  .SignUp h2 {
+    font-weight: bold;
+    /* margin-right: 50%; */
+    width: 100%;
+    text-align: center;
+  
+  }
+  
+  .SignUp-Name {
+    display: flex;
+  }
+  
+  .SignUp-Name input {
+    width: 154px;
+    margin-right: 5px;
+  }
+  .Sign-form {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+  }
+  
+  .Sign-form button {
+    color: white;
+    background-color: #1877f2;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  .Sign-form input {
+    /* color: rgb(110, 107, 107); */
+    /* background-color:#1877f2; */
+    margin: 10px 0;
+    /* border: 2px rgb(11, 11, 11); */
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+  }  

@@ -1,0 +1,64 @@
+.RDataCard {
+    padding: 20px;
+    width: 400px;
+    height: 300px;
+    /* background: white; */
+    margin: 20px;
+    border-radius: 10px;
+    /* box-shadow: 3px 3px rgb(21, 21, 21); */
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .RDataCard-Link {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+  
+  .RDataCard-Link a {
+    color: #326274;
+    background-color: white;
+    margin: 5px 30px;
+    border: 3px solid #326274;
+    /* border-radius: 5px; */
+  
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    width: 80px;
+  
+    /* height: 40px; */
+  }
+  
+  .RDataCard-Link a:hover {
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    background-color: #326274;
+    color: white;
+  }
+  
+  .RDataCard h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: #3B413C;
+    margin-top: -5px;
+    /* margin-left: 40%; */
+    align-self: center;
+    text-decoration: solid underline;
+  }
+  
+  .RDataCard-list {
+    padding: 3px;
+    margin-bottom: 40px;
+    color: rgb(36, 84, 158);
+    font-size: 15px;
+  }

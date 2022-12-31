@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './RDataCard.css'
 function RDataCard({title,Topic1,Topic2,Topic3,Link1,Link2}) {
   return (
     <div className='RDataCard'>

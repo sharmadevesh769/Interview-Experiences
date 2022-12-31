@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link}  from 'react-router-dom';
-function RCard({title,p1,p2,p3}) {
+import './RCard.css'
 
+function RCard({title,p1,p2,p3}) {
 
   return (
     <div className='Resources'>
