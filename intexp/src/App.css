@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@500&display=swap');
 
+
 .App {
   color: #3B413C;
   background: #DAF0EE;
   font-family: 'Poppins', sans-serif;
-  height: 100%;
+  height: max(100%, 100vh);
 }
 
 .Nav {
@@ -58,6 +59,7 @@
 .Home {
   margin-top: 50px;
   width: 100%;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -387,6 +389,7 @@
 
 .Experience {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   padding: 30px;
@@ -398,8 +401,8 @@
   margin: 10px;
   display: flex;
   flex-direction: column;
-  margin-right: auto;
-  position: fixed;
+  /* margin-right: auto; */
+  /* position: fixed; */
   top: 150px;
   left: 40px;
 }
@@ -469,6 +472,7 @@
   position: relative;
   width: 500px;
   height: 400px;
+  
 }
 
 .NB {
@@ -493,18 +497,89 @@
   word-wrap: break-word;
   font-size: 20px;
   position: sticky;
+  overflow-y: scroll;
 }
 
-.ShowExp h2 {
-  margin-top: 0;
+
+.company{
+  font-size: 20px;
+  text-align: center;
   font-weight: bold;
-  font-size: 40px;
-  text-decoration: underline;
-  color: #26292e;
+}
+.MasterExp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 150px;
+  /* flex-direction: column;
+  margin-left: 700px; */
 }
 
-.MasterExp {
+.delExp{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: whitesmoke;
+  font-weight: bold;
+  font-size: 15px;
+  width: 100px;
+  height: 40px;
+}
+.delExp:hover{
+  background-color: grey;
+  color: white;
+  transition: 0.1s ease-in-out;
+  font-weight: bold;
+  border: 2px solid grey;
+}
+
+.about{
+  margin-top: 50px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-left: 700px;
+  align-items: center;
 }
+
+.submit{
+  margin-left: 60%;
+  margin-bottom: 30px;
+  padding: 35px;
+  background: #dfeae9;
+  border: 3px solid whitesmoke;
+  /* margin: 25px; */
+}
+.submit h4{
+  margin: 0;
+}
+.submit h3{
+  margin: 5px;
+  font-weight: bold;
+  
+
+}
+.about-cnt{
+  padding: 35px;
+  background: #dfeae9;
+  border: 3px solid whitesmoke;
+  margin: 25px;
+}
+.RCard_container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+
+}
+
+.searchBar{
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.MyExp{
+  
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  margin-left: auto;
+}
+

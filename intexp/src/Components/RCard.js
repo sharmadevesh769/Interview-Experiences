@@ -1,6 +1,8 @@
 import React from 'react'
-
+import {Link}  from 'react-router-dom';
 function RCard({title,p1,p2,p3}) {
+
+
   return (
     <div className='Resources'>
       <div className='Resources-Card'>
@@ -10,7 +12,7 @@ function RCard({title,p1,p2,p3}) {
           <p>{p2}</p>
           <p>{p3}</p>
         </div>
-        <a href="RData">View</a>
+        <Link to={`/RData?topic=${title}`}>View</Link>
       </div>
     </div>
   )

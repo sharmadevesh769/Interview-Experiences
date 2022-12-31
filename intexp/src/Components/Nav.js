@@ -20,16 +20,19 @@ const Nav = ({isLoggedIn}) => {
                 <a href="/" className="mid-bt">
                     Home
                 </a>
-                <a href="Exp" className="mid-bt">
+                <a href="/Exp" className="mid-bt">
                     Experience
                 </a>
-                <a href="Resources" className="mid-bt">
+                <a href="/Resources" className="mid-bt">
                     Resources
                 </a>
-                <a href="About" className="mid-bt">
-                    About Us
+                <a href="/MyExp" className="mid-bt">
+                    My Experience
                 </a>
-                <a href="Contact" className="mid-bt">
+                {/* <a href="/About" className="mid-bt">
+                    About Us
+                </a> */}
+                <a href="/Contact" className="mid-bt">
                     Contact Us
                 </a>
             </div>

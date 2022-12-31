@@ -1,6 +1,5 @@
 import mongoose from 'mongoose'
-const Schema=mongoose.Schema;
-
+const { ObjectId } =mongoose.Schema.Types
  const expSchema=new mongoose.Schema({
     company:{
         type:String,
@@ -13,8 +12,12 @@ const Schema=mongoose.Schema;
         type:String,
         required:true
     },
-    userId: {
-        type: Schema.Types.ObjectId,
+    role:{
+        type:String,
+        required:true
+    },
+    postedBy: {
+        type: ObjectId,
         ref: 'User'
     }
  })
