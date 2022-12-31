@@ -49,17 +49,21 @@ const Experience = () => {
                     onChange={e => setQue(e.target.value)}
                 />
             </div>
-            {experience.filter(exp => exp.company.includes(que)).map(exp =>
-                <div className='ShowExp'>
-                    <h2 className='company'>{exp.company}</h2>
-                    <div className='NB'>
-                        <h3>{exp.batch}</h3>
-                        <h3>Name</h3>
-                        <h3>{exp.role}</h3>
+            <div class="exp-grid">
+                {experience.filter(my=>my.company.toLowerCase().includes(que)).map(my =>
+                    <div class="course">
+                        <div class="course-preview">
+                            <h6>Anonymous</h6>
+                            <h2>{my.company}</h2>
+                            <h6>Batch: {my.batch}</h6>
+                        </div>
+                        <div class="course-info">
+                            <h6>Role:{my.role}</h6>
+                            <p>{my.desc} </p>
+                        </div>
                     </div>
-                    <p className='descP'>{exp.desc}</p>
-                </div>
-            )}
+                )}
+            </div>
         </div>
     )
 }

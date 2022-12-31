@@ -4,7 +4,8 @@
 
 .App {
   color: #3B413C;
-  background: #DAF0EE;
+  background: rgb(42,38,95);
+  background: linear-gradient(17deg, rgba(42,38,95,1) 41%, rgba(73,135,199,1) 67%);
   font-family: 'Poppins', sans-serif;
   height: max(100%, 100vh);
 }
@@ -13,6 +14,8 @@
   background-color: white;
   display: flex;
   justify-content: space-evenly;
+  /* position: fixed;
+  width: 100vw; */
 }
 
 .Nav-mid {
@@ -26,13 +29,14 @@
   /* background-color: red; */
   padding: 10px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #3B413C;
   font-weight: bold;
 }
 
 .mid-bt:hover {
-  background-color: #DAF0EE;
+  background-color: #2A265F;
+  color: white;
   transition: 0.1s ease-in-out;
 }
 
@@ -44,8 +48,8 @@
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 20px;
-  background: #DAF0EE;
-  color: #3B413C;
+  background: #2A265F;;
+  color: white;
   font-weight: bold;
   font-size: 20px;
 }
@@ -53,21 +57,23 @@
 .signin-bt:hover {
   /* border: solid 5px #DAF0EE; */
   background-color: white;
+  color:#2A265F;
+  border:5px solid #2A265F;
   transition: 0.1s ease-in-out;
 }
 
 .Home {
-  margin-top: 50px;
-  width: 100%;
-  /* height: 100vh; */
+  /* margin-top: 50px; */
+  width: 100vw;
+  height: 120vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 
 }
 
 .name {
-  color: #326274;
+  color: #0a3544;
   font-size: 60px;
   margin-top: -50px;
   /* font-family: 'Inter', sans-serif; */
@@ -89,7 +95,9 @@
 }
 
 .Contact {
-  padding: 20px;
+  margin-left: 30%;
+  padding: 30px;
+  color: whitesmoke;
 }
 
 .contact-form {
@@ -320,7 +328,9 @@
 }
 
 .Res-Cont {
-  display: flex;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
 }
 
 .RDataCard {
@@ -395,14 +405,20 @@
   padding: 30px;
 
 }
-
+.exp-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .AddExp {
+  width: 40%;
+  height: 100%;
   padding: 10px;
   margin: 10px;
   display: flex;
   flex-direction: column;
   /* margin-right: auto; */
-  /* position: fixed; */
+  position: sticky;
   top: 150px;
   left: 40px;
 }
@@ -560,9 +576,11 @@
 }
 .about-cnt{
   padding: 35px;
-  background: #dfeae9;
-  border: 3px solid whitesmoke;
+  /* background: rgba(73,135,199,1); */
+  /* border: 3px solid whitesmoke; */
+  color: whitesmoke;
   margin: 25px;
+  width: 900px;
 }
 .RCard_container{
   display: grid;
@@ -576,10 +594,46 @@
 }
 
 .MyExp{
-  
-  display: flex;
+  width: 100vw;
+  position: relative;
+  /* display: flex;
   justify-content: space-between;
   /* flex-direction: column; */
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 
+.title-img{
+  /* background-color: wheat; */
+  width: 40%;
+  padding: 20px;
+  /* margin-top: -100px */
+}
+.title-img img{
+  position: absolute;
+  top: 100px;
+}
+.Resource{
+
+  height: 100vh;
+}
+.txt-container{
+  padding: 40px;
+  width: 60%;;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.txt-container h1{
+  text-align: center;
+  margin-left: 50px;
+}
+.txt-container h3{
+   text-align: justify;
+   width: auto;
+}
+
+.contact-title{
+  font-weight: bold;
+  font-size: 50px;
+}

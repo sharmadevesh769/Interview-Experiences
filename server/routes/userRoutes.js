@@ -37,11 +37,11 @@ router.get("/isAuthorized",authenticateJWT,(req,res) => {
 router.post("/register", async (req, res) => {
     const { fname, lname, email, password } = req.body
     if (!fname || !email || !password) {
-        res.send("REQUUIRED FIELDS")
+        res.send("Please Enter All Fields")
     }
     const taken = await User.findOne({ email: email })
     if (taken) {
-        res.status(401).json({message:"User Already Exists"})
+       return res.status(404).json({message:"User Already Exists"})
     }
     else {
         const hashp = await bcrypt.hash(password, 10)
@@ -49,7 +49,7 @@ router.post("/register", async (req, res) => {
             fname, lname, email, password: hashp
         })
         newUser.save()
-        res.status(200).json({message:"Saved Succesfully"})
+        return res.status(200).json({message:"Saved Succesfully"})
 
     }
 })

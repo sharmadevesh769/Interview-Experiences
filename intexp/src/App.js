@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import Nav from './Components/Nav.js';
+import Footer from './Components/Footer.js';
 import Home from './Components/Home.js';
 import Contact from './Components/Contact.js';
 import { Route, Routes } from "react-router-dom";
@@ -43,6 +44,7 @@ function App() {
         <Route path='/MyExp' element={<MyExp/>} />
         <Route path='/RData' element={<RData />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }

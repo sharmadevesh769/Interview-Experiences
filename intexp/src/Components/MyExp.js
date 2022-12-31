@@ -1,14 +1,14 @@
 import React from 'react'
 import { useEffect, useState } from "react";
 import axios from 'axios';
-
+import './Card.css'
 function MyExp() {
   const token = localStorage.getItem('TOKEN');
   const [addexp, setaddExp] = useState({
     company: "",
     desc: "",
     batch: "",
-    role:""
+    role: ""
   })
   const [myexp, setMyExp] = useState([])
   const handlechange = (e) => {
@@ -31,6 +31,7 @@ function MyExp() {
   }
   const mydata = async () => {
     const { data: { res } } = await axios.get("http://localhost:8000/api/exp/myexp", { headers: { 'Authorization': 'Bearer ' + token } })
+    res.reverse()
     setMyExp(res)
     console.log(myexp)
   }
@@ -69,19 +70,24 @@ function MyExp() {
         <button type="submit" onClick={addExp} >Add Exp</button>
       </div>
 
-      <div className='MExp'>
+    
+      <div class="courses-container">
         {myexp.map(my =>
-          <div className='ShowExp'>
-            <h2 className='company'>{my.company}</h2>
-            <div className='NB'>
-              <h3>{my.batch}</h3>
-              <h3>Anonymous</h3>
-              <h3>{my.role}</h3>
-            </div>
-            <p className='descP'>{my.desc}</p>
-            <button type="submit" onClick={() => updExp(my._id)}>Edit</button>
-            <button type="submit" onClick={() => delExp(my._id)}>Delete</button>
+          <div class="course">
+          <div class="course-preview">
+            <h6>Anonymous</h6>
+            <h2>{my.company}</h2>
+            <h6>Batch: {my.batch}</h6>
           </div>
+          <div class="course-info">
+            <h6>Role:{my.role}</h6>
+            <p>{my.desc} </p>
+            <div className='btn-container'>
+              <button class="btn"  onClick={() => updExp(my._id)}>Edit</button>
+              <button class="btn" onClick={() => delExp(my._id)}>Delete</button>
+            </div>
+          </div>
+        </div>
         )}
       </div>
     </div>

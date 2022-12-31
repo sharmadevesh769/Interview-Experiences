@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 const Resources = () => {
 
     return (
-        <div>
+        <div className='Resource'>
             <h2 className='Resources-title'>Resources</h2>
             <div className='Res-Cont'>
                 <RCard

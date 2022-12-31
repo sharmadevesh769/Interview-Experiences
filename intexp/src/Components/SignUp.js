@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
-
+import {useNavigate} from 'react-router-dom'
 const SignUp = () => {
-
+   const nav=useNavigate()
   const [user, setUser] = useState({
     fname: "",
     lname: "",
@@ -22,14 +22,20 @@ const SignUp = () => {
     })
   }
 
-  const register = (e) => {
+  const register = async(e) => {
     e.preventDefault()
     const { fname, lname, email, password, cpassword } = user
     console.log("HELLO")   
     if (fname && email && password && (password === cpassword)) {  
       
-      axios.post("http://localhost:8000/api/register", user)
-      .then(res=>console.log(res))
+     const res= await axios.post("http://localhost:8000/api/register", user)
+     if(res.status==404){
+      alert("User Already Exists")
+     }
+     else{
+      alert("Saved Successfuly")
+     }
+      
     }else{
       alert("Invalid Input")
     }
