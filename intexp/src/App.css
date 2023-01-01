@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@500&display=swap");
+
+.App {
+  color: #3b413c;
+  background: rgb(42, 38, 95);
+  background: linear-gradient(
+    17deg,
+    rgba(42, 38, 95, 1) 41%,
+    rgba(73, 135, 199, 1) 67%
+  );
+  font-family: "Poppins", sans-serif;
+  height: max(100%, 100vh);
+}
+
+.search-box {
+  padding: 10px;
+  width: 600px;
+  height: 25px;
+  border-radius: 20px;
+  font-size: 20px;
+  border: none;
+}
+
+.Res-Cont {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.Experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 30px;
+}
+.exp-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.AddExp {
+  width: 40%;
+  height: 100%;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+
+  position: sticky;
+  top: 150px;
+  left: 40px;
+}
+.AddExp input {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: whitesmoke;
+  font-weight: bold;
+  font-size: 20px;
+}
+.AddExp button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: whitesmoke;
+  font-weight: bold;
+  font-size: 15px;
+  width: 100px;
+  height: 40px;
+}
+
+.AddExp button:hover {
+  background-color: grey;
+  color: white;
+  transition: 0.1s ease-in-out;
+  font-weight: bold;
+  border: 2px solid grey;
+}
+
+.AddExp input:hover {
+  transition: 0.1s ease-in-out;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+.AddExp textarea {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: whitesmoke;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.AddExp textarea:hover {
+  transition: 0.1s ease-in-out;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+.ShowExp {
+  padding: 30px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
+  border: 4px solid whitesmoke;
+  background: #a8cecb;
+  border-radius: 12px;
+  position: relative;
+  width: 500px;
+  height: 400px;
+}
+
+.NB {
+  padding: 10px;
+  margin-top: -5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 30px;
+  background-color: #c9e9e7;
+  border: 2px solid whitesmoke;
+  border-radius: 8px;
+}
+
+.descP {
+  width: 480px;
+  background-color: #c9e9e7;
+  border: 2px solid whitesmoke;
+  margin-top: 50px;
+  border-radius: 8px;
+  padding: 10px;
+  word-wrap: break-word;
+  font-size: 20px;
+  position: sticky;
+  overflow-y: scroll;
+}
+
+.company {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.MasterExp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 150px;
+}
+
+.delExp {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: whitesmoke;
+  font-weight: bold;
+  font-size: 15px;
+  width: 100px;
+  height: 40px;
+}
+
+.delExp:hover {
+  background-color: grey;
+  color: white;
+  transition: 0.1s ease-in-out;
+  font-weight: bold;
+  border: 2px solid grey;
+}
+
+.about {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submit {
+  margin-left: 60%;
+  margin-bottom: 30px;
+  padding: 35px;
+  background: #dfeae9;
+  border: 3px solid whitesmoke;
+}
+
+.submit h4 {
+  margin: 0;
+}
+
+.submit h3 {
+  margin: 5px;
+  font-weight: bold;
+}
+
+.searchBar {
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.MyExp {
+  width: 100vw;
+  position: relative;
+  display: flex;
+}
+
+.title-img {
+  width: 40%;
+  padding: 20px;
+}
+
+.title-img img {
+  position: absolute;
+  top: 100px;
+}
+
+.Resource {
+  height: 100vh;
+}

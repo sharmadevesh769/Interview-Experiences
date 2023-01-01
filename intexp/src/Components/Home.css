@@ -1,0 +1,44 @@
+.Home {
+    /* margin-top: 50px; */
+    width: 100vw;
+    height: 120vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+  }
+
+  .name {
+    color: #0a3544;
+    font-size: 60px;
+    margin-top: -50px;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    /* margin-top: 100px; */
+  }
+
+  .about-cnt{
+    padding: 35px;
+    /* background: rgba(73,135,199,1); */
+    /* border: 3px solid whitesmoke; */
+    color: whitesmoke;
+    margin: 25px;
+    width: 900px;
+  }
+
+  .txt-container{
+    padding: 40px;
+    width: 60%;;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .txt-container h1{
+    text-align: center;
+    margin-left: 50px;
+  }
+  .txt-container h3{
+     text-align: justify;
+     width: auto;
+  }
