@@ -11,7 +11,7 @@ function RCard({title,p1,p2,p3}) {
         <div className='Resources-label'>
           <p>{p1}</p>
           <p>{p2}</p>
-          <p>{p3}</p>
+          
         </div>
         <Link to={`/RData?topic=${title}`}>View</Link>
       </div>
