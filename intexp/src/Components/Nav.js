@@ -28,11 +28,11 @@ const Nav = ({isLoggedIn}) => {
                     Resources
                 </a>
                 <a href="/MyExp" className="mid-bt">
-                    My Experience
+                    My Exp
                 </a>
-                {/* <a href="/About" className="mid-bt">
-                    About Us
-                </a> */}
+                <a href="/Resume" className="mid-bt">
+                    Resume Build
+                </a>
                 <a href="/Contact" className="mid-bt">
                     Contact Us
                 </a>

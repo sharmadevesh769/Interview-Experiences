@@ -4,6 +4,7 @@ import Nav from "./Components/Nav.js";
 import Footer from "./Components/Footer.js";
 import Home from "./Components/Home.js";
 import Contact from "./Components/Contact.js";
+import Resume from "./resumeBuilder/components/Resume.js"
 import { Route, Routes } from "react-router-dom";
 import SignIn from "./Components/SignIn";
 import SignUp from "./Components/SignUp";
@@ -20,12 +21,16 @@ function App() {
 
   async function getUserLoginStatus() {
     const token = localStorage.getItem("TOKEN");
+    try{
     const {
       data: { isAuthenticated },
     } = await axios.get("http://localhost:8000/api/isAuthorized", {
       headers: { Authorization: "Bearer " + token },
     });
     setIsLoggedIn(isAuthenticated);
+  }catch(e){
+    console.log(e);
+  }
   }
 
   useEffect(() => {
@@ -43,6 +48,7 @@ function App() {
           path="/SignIn"
           element={<SignIn setIsLoggedIn={setIsLoggedIn} />}
         />
+        <Route path="/Resume" element={<Resume/>}/>
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Resources" element={<Resources />} />
         <Route path="/MyExp" element={<MyExp />} />

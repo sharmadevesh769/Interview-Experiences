@@ -19,6 +19,7 @@ function MyExp() {
     });
   };
   const addExp = async (e) => {
+    try{
     const ex = await axios.post("http://localhost:8000/api/exp", addexp, {
       headers: { Authorization: "Bearer " + token },
     });
@@ -30,8 +31,10 @@ function MyExp() {
       role: "",
     });
     mydata();
+  }catch(e){console.log(e)}
   };
   const mydata = async () => {
+    try{
     const {
       data: { res },
     } = await axios.get("http://localhost:8000/api/exp/myexp", {
@@ -40,6 +43,9 @@ function MyExp() {
     res.reverse();
     setMyExp(res);
     console.log(myexp);
+  }catch(e){
+    console.log(e);
+  }
   };
   const delExp = async (id) => {
     const d = await axios.delete(`http://localhost:8000/api/exp/${id}`, {

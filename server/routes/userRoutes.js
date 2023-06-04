@@ -5,8 +5,13 @@ import User from '../Schema/userSchema.js'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import authenticateJWT from "../MiddleWare/Auth.js";
-
-
+import pdf  from "html-pdf";
+import pdfTemplate from  "../../documents/index.js";
+const options = {
+    height: "42cm",
+    width: "35.7cm",
+    timeout: "600000",
+  };
 
 router.post("/login",(req, res) => {
     const { email, password } = req.body
@@ -53,5 +58,15 @@ router.post("/register", async (req, res) => {
 
     }
 })
+
+router.post("/create-pdf", (req, res) => {
+    pdf.create(pdfTemplate(req.body), options).toFile("Resume.pdf", (err) => {
+      if (err) {
+        console.log(err);
+        res.send(Promise.reject());
+      } else res.send(Promise.resolve());
+    });
+  });
+
 export default router
 
